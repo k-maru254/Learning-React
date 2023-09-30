@@ -1,0 +1,7 @@
+
+.nav-bar{
+    display: flex;
+    margin: 8px 0;
+    justify-content: space-evenly;   
+    user-select: none;
+}
