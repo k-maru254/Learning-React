@@ -1,0 +1,11 @@
+:root{
+    --white-hover-color: rgb(241, 240, 240);
+    --color-1: black;
+    --color-2: white;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

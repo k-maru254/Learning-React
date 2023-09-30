@@ -1,0 +1,18 @@
+.nav-button{
+    border-radius: 4px;
+    background: var(--color-2);
+    color: var(--color-1);
+    border: 2px solid var(--color-1);
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px;
+    transition: all 150ms ease;
+}
+
+.nav-button:hover{
+    background: var(--color-1);
+    color: var(--color-2);
+}
