@@ -1,10 +1,12 @@
 import React from 'react';
 import "../../styles/NavButton.css";
+import {Link} from "react-router-dom";
 
-function NavButton({children}) {
+function NavButton({routePath, children}) {
+  console.log(routePath);
   return (
-    <div className="nav-button">
-      {children}
+    <div >      
+      <Link className="nav-button" to={routePath}>{children}</Link>
     </div>
   );
 }
