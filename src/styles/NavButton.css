@@ -10,6 +10,7 @@
     cursor: pointer;
     padding: 4px;
     transition: all 150ms ease;
+    text-decoration: none;
 }
 
 .nav-button:hover{
