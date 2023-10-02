@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/header/Header';
 import "./styles/app.css";
 import {Routes, Route} from "react-router-dom";
@@ -12,14 +12,15 @@ import HTTP  from "./components/HTTP/HTTP";
 import Internationalization from "./components/internationalization/Internationalization";
 import FormValidation from "./components/formValidation/FormValidation";
 import Animation from "./components/animation/Animation";
+import NoMatch from './components/NoMatch';
 
 function App() {
+  const [showHeader, setShowHeader] = useState(true); 
   return (
     <>
-      <Header/>
       <Routes>
         <Route element={<Layout/>}>
-          <Route index element={<Home/>}/>
+          <Route index element={<Home setShowHeader={setShowHeader}/>}/>
           <Route path="/routes" element={<LRoutes/>}/>
           <Route path="/context API" element={<ContextAPI/>}/>
           <Route path="/hoc" element={<HOC/>}/>
@@ -28,8 +29,10 @@ function App() {
           <Route path="/internationalization" element={<Internationalization/>}/>
           <Route path="/form validation" element={<FormValidation/>}/>
           <Route path="/animation" element={<Animation/>}/>
+          <Route path="*" element={<NoMatch setShowHeader={setShowHeader}/>}/>
         </Route>
       </Routes>
+      {showHeader && <Header/>}
     </>
   )
 }
