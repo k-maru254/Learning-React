@@ -18,6 +18,7 @@ function App() {
   const [showHeader, setShowHeader] = useState(true); 
   return (
     <>
+      {showHeader && <Header/>}
       <Routes>
         <Route element={<Layout/>}>
           <Route index element={<Home setShowHeader={setShowHeader}/>}/>
@@ -32,7 +33,6 @@ function App() {
           <Route path="*" element={<NoMatch setShowHeader={setShowHeader}/>}/>
         </Route>
       </Routes>
-      {showHeader && <Header/>}
     </>
   )
 }

@@ -1,12 +1,17 @@
 import React from 'react';
 import "../../styles/NavButton.css";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function NavButton({routePath, children}) {
   console.log(routePath);
+  const aStyle = ({isActive}) => {
+    return(
+      isActive? { background: "black", color: "white"}: console.log("😌 not active")
+    )
+  };
   return (
     <div >      
-      <Link className="nav-button" to={routePath}>{children}</Link>
+      <NavLink className="nav-button" style={aStyle} to={routePath}>{children}</NavLink>
     </div>
   );
 }
