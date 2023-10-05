@@ -4,7 +4,7 @@ function Home({setShowHeader}) {
   
   return (
     <div>
-      <p>We are Home!</p>
+      <p>Hello... welcome to this learner's app. Here you will get to see what he has been learning.</p>
     </div>
   )
 }

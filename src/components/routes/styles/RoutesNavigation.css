@@ -1,0 +1,6 @@
+.routes-navigation{
+    height: 100%;
+    width: 100%;
+    background: red;
+    flex: 1 1;
+}

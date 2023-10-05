@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from './components/header/Header';
 import "./styles/app.css";
 import {Routes, Route} from "react-router-dom";
@@ -13,26 +13,44 @@ import Internationalization from "./components/internationalization/Internationa
 import FormValidation from "./components/formValidation/FormValidation";
 import Animation from "./components/animation/Animation";
 import NoMatch from './components/NoMatch';
+import LeftAside from './components/LeftAside';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); 
+  const headerRef = useRef(null);  
+  const [headerHeight, setHeaderHeight] = useState(0)
+  useEffect(
+    () => {
+      setHeaderHeight(headerRef.current.clientHeight);
+      console.log(headerHeight)
+    }, [headerHeight]
+  );
+
+  const wraperHeight = {
+    height: `calc(100vh - ${headerHeight}px)`
+  }
+
   return (
     <>
-      {showHeader && <Header/>}
-      <Routes>
-        <Route element={<Layout/>}>
-          <Route index element={<Home setShowHeader={setShowHeader}/>}/>
-          <Route path="/routes" element={<LRoutes/>}/>
-          <Route path="/context API" element={<ContextAPI/>}/>
-          <Route path="/hoc" element={<HOC/>}/>
-          <Route path="/render props" element={<RenderProps/>}/>
-          <Route path="/http" element={<LRoutes/>}/>
-          <Route path="/internationalization" element={<Internationalization/>}/>
-          <Route path="/form validation" element={<FormValidation/>}/>
-          <Route path="/animation" element={<Animation/>}/>
-          <Route path="*" element={<NoMatch setShowHeader={setShowHeader}/>}/>
-        </Route>
-      </Routes>
+      {showHeader && <Header ref={headerRef} />}
+
+      <div style={wraperHeight} className="body-wraper">
+        <LeftAside/>
+        <Routes>
+          <Route element={<Layout/>}>
+            <Route index element={<Home setShowHeader={setShowHeader}/>}/>
+            <Route path="/routes" element={<LRoutes/>}/>
+            <Route path="/context API" element={<ContextAPI/>}/>
+            <Route path="/hoc" element={<HOC/>}/>
+            <Route path="/render props" element={<RenderProps/>}/>
+            <Route path="/http" element={<HTTP/>}/>
+            <Route path="/internationalization" element={<Internationalization/>}/>
+            <Route path="/form validation" element={<FormValidation/>}/>
+            <Route path="/animation" element={<Animation/>}/>
+            <Route path="*" element={<NoMatch setShowHeader={setShowHeader}/>}/>
+          </Route>
+        </Routes>
+      </div>
     </>
   )
 }
