@@ -9,3 +9,8 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.body-wraper{
+    height: calc(100vh - 150px);
+    background: var(--color-1);
+    display: flex;
+}

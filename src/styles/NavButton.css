@@ -11,6 +11,7 @@
     padding: 4px;
     transition: all 150ms ease;
     text-decoration: none;
+    transition: all 200ms ease;
 }
 
 .nav-button:hover{
