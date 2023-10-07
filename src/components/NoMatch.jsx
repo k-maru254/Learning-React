@@ -12,7 +12,7 @@ function NoMatch({setShowHeader}) {
     setShowHeader(false);
   return (
     <div style={style}>
-      Not allowed
+      Error 404
     </div>
   )
 }

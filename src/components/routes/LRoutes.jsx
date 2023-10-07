@@ -7,11 +7,16 @@
 
 import React from 'react';
 import RoutesNavigation from './RoutesNavigation';
+import "./styles/LRoutes.css"
+import RoutesBody from './RoutesBody';
 
 function LRoutes() {
   return (
     <div className="l-routes">
-      <RoutesNavigation />
+      <div style={{display:"flex", justifyContent:"right"}}>
+        <RoutesNavigation />
+      </div>
+      <RoutesBody />
     </div>
   );
 }

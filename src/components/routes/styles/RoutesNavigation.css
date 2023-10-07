@@ -1,6 +1,11 @@
 .routes-navigation{
-    height: 100%;
-    width: 100%;
-    background: red;
+    height: 50px;
+    min-width: 350px;
     flex: 1 1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0 0 50%;
+    user-select: none;
 }

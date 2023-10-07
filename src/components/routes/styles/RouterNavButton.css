@@ -1,0 +1,17 @@
+.routes-nav-button{
+    padding: 8px;
+    border-radius: 5px;
+    width: 88px;
+    margin: 4px;
+    text-align: center;
+    color: #0C4A60 ;
+    border: solid #EF6C33  1px;
+    transition: all 150ms ease;
+    background: #E1DDDB;
+}
+
+.routes-nav-button:hover{
+    color: #EF6C33  ;
+    background: #0C4A60 ;
+    border: solid #E1DDDB  1px;
+}

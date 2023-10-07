@@ -1,0 +1,5 @@
+.l-routes{
+    display: flex;
+    justify-content: right;
+    flex-flow: column wrap;
+}

@@ -21,9 +21,10 @@ function App() {
   const [headerHeight, setHeaderHeight] = useState(0)
   useEffect(
     () => {
-      setHeaderHeight(headerRef.current.clientHeight);
+      console.log(headerRef)
+      headerRef.current? setHeaderHeight(headerRef.current.clientHeight): setHeaderHeight(0);
       console.log(headerHeight)
-    }, [headerHeight]
+    }, [headerHeight, showHeader]
   );
 
   const wraperHeight = {
@@ -35,7 +36,7 @@ function App() {
       {showHeader && <Header ref={headerRef} />}
 
       <div style={wraperHeight} className="body-wraper">
-        <LeftAside/>
+      {showHeader && <LeftAside/>}
         <Routes>
           <Route element={<Layout/>}>
             <Route index element={<Home setShowHeader={setShowHeader}/>}/>
