@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Outlet} from "react-router-dom";
 
-function RoutesBody() {
+function RoutesBody({children}) {
   return (
     <div>
-      This is the routes body
+      {children}
     </div>
-  )
+  );
 }
 
 export default RoutesBody

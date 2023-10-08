@@ -3,10 +3,9 @@ import "../../styles/NavButton.css";
 import {NavLink} from "react-router-dom";
 
 function NavButton({routePath, children}) {
-  console.log(routePath);
   const aStyle = ({isActive}) => {
     return(
-      isActive? { background: "black", color: "white"}: console.log("😌 not active")
+      isActive? { background: "black", color: "white"}: {}
     )
   };
   return (

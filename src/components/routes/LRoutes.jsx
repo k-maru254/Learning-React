@@ -9,6 +9,8 @@ import React from 'react';
 import RoutesNavigation from './RoutesNavigation';
 import "./styles/LRoutes.css"
 import RoutesBody from './RoutesBody';
+import RoutesHome from './RoutesHome';
+import { Outlet } from 'react-router-dom';
 
 function LRoutes() {
   return (
@@ -16,7 +18,9 @@ function LRoutes() {
       <div style={{display:"flex", justifyContent:"right"}}>
         <RoutesNavigation />
       </div>
-      <RoutesBody />
+      <RoutesBody>
+        <Outlet/>
+      </RoutesBody>
     </div>
   );
 }
