@@ -7,11 +7,20 @@
 
 import React from 'react';
 import RoutesNavigation from './RoutesNavigation';
+import "./styles/LRoutes.css"
+import RoutesBody from './RoutesBody';
+import RoutesHome from './RoutesHome';
+import { Outlet } from 'react-router-dom';
 
 function LRoutes() {
   return (
     <div className="l-routes">
-      <RoutesNavigation />
+      <div style={{display:"flex", justifyContent:"right"}}>
+        <RoutesNavigation />
+      </div>
+      <RoutesBody>
+        <Outlet/>
+      </RoutesBody>
     </div>
   );
 }

@@ -14,6 +14,10 @@ import FormValidation from "./components/formValidation/FormValidation";
 import Animation from "./components/animation/Animation";
 import NoMatch from './components/NoMatch';
 import LeftAside from './components/LeftAside';
+import RoutesHome from './components/routes/RoutesHome';
+import RoutesStaff from './components/routes/RoutesStaff';
+import RoutesClients from './components/routes/RoutesClients';
+import RoutesServices from './components/routes/RoutesServices';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); 
@@ -21,9 +25,8 @@ function App() {
   const [headerHeight, setHeaderHeight] = useState(0)
   useEffect(
     () => {
-      setHeaderHeight(headerRef.current.clientHeight);
-      console.log(headerHeight)
-    }, [headerHeight]
+      headerRef.current? setHeaderHeight(headerRef.current.clientHeight): setHeaderHeight(0);
+    }, [headerHeight, showHeader]
   );
 
   const wraperHeight = {
@@ -35,11 +38,17 @@ function App() {
       {showHeader && <Header ref={headerRef} />}
 
       <div style={wraperHeight} className="body-wraper">
-        <LeftAside/>
+      {showHeader && <LeftAside/>}
         <Routes>
           <Route element={<Layout/>}>
             <Route index element={<Home setShowHeader={setShowHeader}/>}/>
-            <Route path="/routes" element={<LRoutes/>}/>
+            <Route path="/routes" element={<LRoutes/>}>
+              <Route index element={<RoutesHome/>}/>
+              <Route path="home" element={<RoutesHome/>}/>
+              <Route path="staff" element={<RoutesStaff/>}/>
+              <Route path="clients" element={<RoutesClients/>}/>
+              <Route path="services" element={<RoutesServices/>}/>
+            </Route>
             <Route path="/context API" element={<ContextAPI/>}/>
             <Route path="/hoc" element={<HOC/>}/>
             <Route path="/render props" element={<RenderProps/>}/>
