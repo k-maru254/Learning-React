@@ -1,5 +1,7 @@
 .l-routes{
     display: flex;
     justify-content: right;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    overflow: auto;
+    height: 100%;
 }

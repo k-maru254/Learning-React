@@ -18,9 +18,7 @@ function LRoutes() {
       <div style={{display:"flex", justifyContent:"right"}}>
         <RoutesNavigation />
       </div>
-      <RoutesBody>
-        <Outlet/>
-      </RoutesBody>
+      <Outlet/>
     </div>
   );
 }
