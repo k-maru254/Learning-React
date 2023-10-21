@@ -14,10 +14,8 @@ import FormValidation from "./components/formValidation/FormValidation";
 import Animation from "./components/animation/Animation";
 import NoMatch from './components/NoMatch';
 import LeftAside from './components/LeftAside';
-import RoutesHome from './components/routes/RoutesHome';
+import RoutesHome from './components/routes/RoutesHome'
 import RoutesStaff from './components/routes/RoutesStaff';
-import RoutesClients from './components/routes/RoutesClients';
-import RoutesServices from './components/routes/RoutesServices';
 import Staff from './components/routes/Staff';
 
 function App() {
@@ -48,7 +46,6 @@ function App() {
               <Route path="home" element={<RoutesHome/>}/>
               <Route path="staff/*" element={<RoutesStaff/>}/>
               <Route path="clients/*" element={<RoutesStaff/>}/>
-              <Route path="services" element={<RoutesServices/>}/>
             </Route>
             <Route path="/context API" element={<ContextAPI/>}/>
             <Route path="/hoc" element={<HOC/>}/>
