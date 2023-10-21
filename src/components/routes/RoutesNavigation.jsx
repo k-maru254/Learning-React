@@ -1,7 +1,6 @@
 import React from 'react';
 import "./styles/RoutesNavigation.css";
 import RouterNavButton from "./RouterNavButton";
-import {Outlet} from "react-router-dom";
 
 function RoutesNavigation() {
   const navs = [
@@ -16,10 +15,6 @@ function RoutesNavigation() {
     {
       path: "clients",
       label: "Clients"
-    },
-    {
-      path: "services",
-      label: "Services"
     }
   ]
   return (

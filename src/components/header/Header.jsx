@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import NavButton from './NavButton';
 import "../../styles/header.css"
 import Logo from './Logo';
 import Search from './Search';

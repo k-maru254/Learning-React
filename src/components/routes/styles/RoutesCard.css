@@ -1,5 +1,5 @@
 .routes-card{
-    width: 100%;
+    min-width: 550px;
     height: 200px;
     border: #E1DDDB solid 2px;
     border-radius: 16px;
@@ -8,6 +8,7 @@
     padding: 8px;
     display: flex;
     flex-flow: wrap;
+    flex: 0 1 75%;
 }
 
 .profile-image{
@@ -22,4 +23,39 @@
 .user-details{
     margin: 0 8px;
     padding: 4px;
+    width: 60%
+}
+.name{
+    font-weight: bold;
+    color: #EF6C33;
+    text-decoration: none;
+}
+.age{
+    font-size: 12px;
+    padding: 8px 0;
+    color:#0c4a6092;
+    text-decoration: none;
+}
+.department{
+    font-size: 14px;
+    color: black;
+}
+.duties{
+    box-shadow: 1px 1px 3px black;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 8px;
+    width: 100%;    
+    margin: 8px 0;
+    border-radius: 4px;
+}
+.duties > p{
+    font-size: 14px;
+    color:#0c4a6092;
+}
+.duties > ul{    
+    font-size: 12px;
+    color:#0c4a60;
+    flex: 1 1 60px;
+
 }
