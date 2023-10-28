@@ -6,7 +6,7 @@ function Staff({data}) {
     let selectedData = data.filter(datum => datum.id == userId)[0];
   return (
     <div>
-      {`Delete ${selectedData.id}`
+      {`Showing ${selectedData.fName} ${selectedData.sirName}`
     }
     </div>
   );

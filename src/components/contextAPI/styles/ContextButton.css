@@ -1,0 +1,13 @@
+.context-button{
+    width: 100px;
+    height: 40px;
+    margin: 8px;
+    background: rgb(251, 105, 0);
+    color: darkblue;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+}

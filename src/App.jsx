@@ -16,7 +16,12 @@ import NoMatch from './components/NoMatch';
 import LeftAside from './components/LeftAside';
 import RoutesHome from './components/routes/RoutesHome'
 import RoutesStaff from './components/routes/RoutesStaff';
-import Staff from './components/routes/Staff';
+import UserContent from './components/contextAPI/UserContent';
+import ContextHome from './components/contextAPI/ContextHome';
+import ContextUser from './components/contextAPI/ContextUser';
+import ContextWrapper from './components/contextAPI/ContextWrapper';
+import HOCClients from './components/HOC/HOCClients';
+import HOCEmployees from './components/HOC/HOCEmployees';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); 
@@ -47,8 +52,17 @@ function App() {
               <Route path="staff/*" element={<RoutesStaff/>}/>
               <Route path="clients/*" element={<RoutesStaff/>}/>
             </Route>
-            <Route path="/context API" element={<ContextAPI/>}/>
-            <Route path="/hoc" element={<HOC/>}/>
+            <Route path="/context API" element={<ContextAPI/>}>              
+              <Route element={<ContextWrapper/>}>              
+                <Route index element={<ContextHome/>}/>
+                <Route path="user" element={<ContextUser/>}/>
+                <Route path="content" element={<UserContent/>}/>
+              </Route>
+            </Route>
+            <Route path="/hoc" element={<HOC/>}>
+              <Route path="clients" element={<HOCClients/>}/>
+              <Route path="employees" element={<HOCEmployees/>}/>
+            </Route>
             <Route path="/render props" element={<RenderProps/>}/>
             <Route path="/http" element={<HTTP/>}/>
             <Route path="/internationalization" element={<Internationalization/>}/>
@@ -59,7 +73,7 @@ function App() {
         </Routes>
       </div>
     </>
-  )
+  )  
 }
 
 export default App
