@@ -22,6 +22,8 @@ import ContextUser from './components/contextAPI/ContextUser';
 import ContextWrapper from './components/contextAPI/ContextWrapper';
 import HOCClients from './components/HOC/HOCClients';
 import HOCEmployees from './components/HOC/HOCEmployees';
+import HOCHome from './components/HOC/HOCHome';
+import HOCMain from './components/HOC/HOCMain';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); 
@@ -60,8 +62,11 @@ function App() {
               </Route>
             </Route>
             <Route path="/hoc" element={<HOC/>}>
-              <Route path="clients" element={<HOCClients/>}/>
-              <Route path="employees" element={<HOCEmployees/>}/>
+              <Route index element={<HOCHome/>}/>
+              <Route element={<HOCMain/>}>
+                <Route path="clients" element={<HOCClients/>}/>
+                <Route path="employees" element={<HOCEmployees/>}/>
+              </Route>
             </Route>
             <Route path="/render props" element={<RenderProps/>}/>
             <Route path="/http" element={<HTTP/>}/>

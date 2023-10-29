@@ -1,10 +1,13 @@
 import React from 'react'
+import HOCPersonsList from './HOCPersonsList'
+import withData from './withData'
 
 function HOCClients() {
+  const ClientListWithData = withData(HOCPersonsList)
   return (
-    <div>
-      Loading clients list...
-    </div>
+    <>
+      <ClientListWithData person="client"/>
+    </>
   )
 }
 

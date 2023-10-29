@@ -1,7 +1,7 @@
-.hoc-header{
+.hoc-main{
     display: flex;
-    min-width: 300px;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    flex-flow: row wrap;
+    margin: 16px;
 }

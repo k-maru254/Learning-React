@@ -1,0 +1,25 @@
+.person-card{
+    min-width: 400px;
+    display: flex;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.634);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+    flex: 0 0 70%;
+    flex-flow: row nowrap;
+}
+.image{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    border: rgb(1, 8, 56) solid 1px;
+}
+.person-info{
+    padding: 0 16px;
+}
+.person-info p{
+    margin: 8px;
+}

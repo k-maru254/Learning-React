@@ -1,0 +1,10 @@
+.nav-buttn{
+    background-color: rgb(0, 255, 170);
+    color:rgb(4, 4, 32);
+    text-decoration: none;
+    margin: 8px;
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    padding: 8px
+}

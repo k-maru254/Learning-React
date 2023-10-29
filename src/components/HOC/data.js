@@ -31,7 +31,7 @@ export const employeesData = [
     }
 ]
 
-export const clientData = [
+export const clientsData = [
     {
         id: 1,
         firstName: "Kally",
@@ -40,28 +40,28 @@ export const clientData = [
         lastVisit: "19 Jan, 2021"
     },
     {
-        id: 1,
+        id: 2,
         firstName: "Jack",
         lastName: "Herthwire",
         regDate: "13 Aug, 2010",
         lastVisit: "03 march, 2022"
     },
     {
-        id: 1,
+        id: 3,
         firstName: "Leonel",
         lastName: "Kawasaki",
         regDate: "28 Feb, 2017",
         lastVisit: "19 Jun, 2023"
     },
     {
-        id: 1,
+        id: 4,
         firstName: "Jian",
         lastName: "Lee",
         regDate: "21 Nov, 2011",
         lastVisit: "11 Oct, 2023"
     },
     {
-        id: 1,
+        id: 5,
         firstName: "Julline",
         lastName: "Rocks",
         regDate: "25 Apr, 2019",

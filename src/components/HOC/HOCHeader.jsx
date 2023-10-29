@@ -1,10 +1,11 @@
 import React from 'react';
+import HOCNavs from './HOCNavs';
 import "./styles/HOCHeader.css";
 
 function HOCHeader() {
   return (
-    <div>
-      
+    <div className="hoc-header">
+      <HOCNavs/>
     </div>
   )
 }
