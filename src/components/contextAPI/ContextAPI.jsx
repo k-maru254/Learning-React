@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import ContextHeader from './context_header/ContextHeader';
+import "./styles/ContextAPI.css"
 
 function ContextAPI() {
   return (
-    <div>
-      <p>Hello Context API</p>
+    <div className="context-api">
+      <ContextHeader/>
+      <Outlet/>
     </div>
   )
 }
