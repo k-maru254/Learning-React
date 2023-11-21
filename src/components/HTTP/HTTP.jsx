@@ -1,10 +1,14 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import HTTPHeader from './HTTPHeader'
 
 function HTTP() {
   return (
-    <div>
-      <p>Hello HTTP</p>
-    </div>
+    <>
+        <HTTPHeader/>
+        <Outlet/>
+      
+    </>
   )
 }
 

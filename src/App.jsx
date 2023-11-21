@@ -8,7 +8,7 @@ import Home from './components/Home';
 import ContextAPI from "./components/contextAPI/ContextAPI";
 import HOC from "./components/HOC/HOC";
 import RenderProps from "./components/renderProps/RenderProps";
-import HTTP  from "./components/HTTP/HTTP";
+import HTTPHome  from "./components/HTTP/HTTPHome";
 import Internationalization from "./components/internationalization/Internationalization";
 import FormValidation from "./components/formValidation/FormValidation";
 import Animation from "./components/animation/Animation";
@@ -24,6 +24,9 @@ import HOCClients from './components/HOC/HOCClients';
 import HOCEmployees from './components/HOC/HOCEmployees';
 import HOCHome from './components/HOC/HOCHome';
 import HOCMain from './components/HOC/HOCMain';
+import HTTP from './components/HTTP/HTTP';
+import HTTPRegister from './components/HTTP/HTTPRegister';
+import HTTPMain from './components/HTTP/HTTPMain';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); 
@@ -69,7 +72,13 @@ function App() {
               </Route>
             </Route>
             <Route path="/render props" element={<RenderProps/>}/>
-            <Route path="/http" element={<HTTP/>}/>
+            <Route path="http" element={<HTTP/>}>
+              <Route element={<HTTPMain/>}>
+                <Route index element={<HTTPHome/>}/>
+                <Route path="home" element={<HTTPHome/>}/>
+                <Route path="register" element={<HTTPRegister/>}/>
+              </Route>
+            </Route>
             <Route path="/internationalization" element={<Internationalization/>}/>
             <Route path="/form validation" element={<FormValidation/>}/>
             <Route path="/animation" element={<Animation/>}/>

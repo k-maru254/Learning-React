@@ -1,0 +1,73 @@
+.http-main{
+    height: calc(100% - 64px);
+    width: 100%;
+}
+
+.form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    overflow: auto;
+    padding: 10px 0;
+}
+.register-teacher{
+    padding: 16px;
+    border-radius: 8px;
+    width: 560px;
+    background:  rgb(6, 56, 83);
+}
+
+#teacher-initials{
+    font-size: 1.02rem;
+    padding: 2px;
+}
+
+.input-container{
+    margin: 12px;
+}
+
+.input-container > label{
+    width: 112px;
+    color: white;
+    display: inline-block;
+    margin-right: 16px;
+}
+.input-container > input{
+    height: 32px;
+    font-size: 1.02rem;
+    border-radius: 4px;
+    width: 65%;
+    padding-left: 8px;
+}
+
+.input-container > input:focus{
+    outline: none;
+}
+
+#subjects{
+    margin-left: 112px;
+    border-radius: 8px;
+    width: 65%;
+}
+
+#subjects > option{    
+    font-size: 1.05rem;
+}
+
+
+.submit-btn{
+    width: 80%;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 1.02rem;
+    background: rgb(255, 119, 0);
+    color: white;
+}
+
+.error-text{
+    color: red;
+    font-size: 0.7rem;
+    text-align: center;
+}
