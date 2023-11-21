@@ -1,0 +1,16 @@
+
+.form-main-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: yellowgreen;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.form-title{
+    display: flex;
+    justify-content: center;
+}

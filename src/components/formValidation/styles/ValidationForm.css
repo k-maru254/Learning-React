@@ -1,0 +1,72 @@
+
+.student-registration-form{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    background: rgb(249, 249, 249);
+    padding: 16px 0;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.student-registration-form > div{
+    width: 90%;
+    padding: 8px;
+}
+
+.student-registration-form > div > input{
+    width: 100%;
+    background: rgb(214, 214, 214);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.06rem;
+}
+
+.student-registration-form > div > input:focus{
+    outline: none;
+    background: white;
+}
+
+.student-registration-form > .subjects-container{
+    width: 65%;
+    padding: 4px;
+    background:rgb(221, 246, 247);
+    border-radius: 8px;
+}
+
+.subjects{
+    width: 100%;
+    border-radius: 8px;
+    background: rgb(214, 214, 214);
+    padding: 8px;
+}
+
+.subjects > option{
+    background:rgb(221, 246, 247);
+    margin: 4px;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.subjecsts > option:checked{
+    outline: none !important;
+}
+
+.submit-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-submit{
+    width: 90%;
+    background: orange;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.error-messsage{
+    color: rgb(255, 14, 14);
+    font-size: 10px;
+}

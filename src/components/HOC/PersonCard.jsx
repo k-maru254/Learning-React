@@ -18,7 +18,7 @@ function PersonCard({personData, personType}) {
 
   return (
     <div className="person-card">
-      <div class="image">
+      <div className="image">
         Image
       </div>
       <div className="person-info">

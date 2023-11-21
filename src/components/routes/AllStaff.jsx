@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import RoutesCard from './RoutesCard';
 
 function AllStaff({data, isStaff}) {
+
+
   return (
     <div>      
         {data.map((datum) =>{
